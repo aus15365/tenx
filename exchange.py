@@ -354,7 +354,7 @@ def demo():
     p1.best_rate(r5)
 
     while(True):
-        import pdb; pdb.set_trace()
+       
         request = input("Input Request :  ")
         if request.startswith("exit"):
             break
@@ -364,7 +364,7 @@ def demo():
             try:
                 _time = request.split(" ")[0]
                 _time = re.sub(r'(?<=[+=][0-9]{2}):', '', _time)
-                #import pdb; pdb.set_trace()
+                
                 time_format='%Y-%m-%dT%H:%M:%S%z'
                 datetime.datetime.strptime(_time, time_format)
                 p1.price_update(request)
